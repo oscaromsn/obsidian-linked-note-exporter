@@ -45,10 +45,8 @@ tests/fixture-vault/.obsidian/plugins/hot-reload/node_modules/
 # Test vault - Ignore all themes
 tests/fixture-vault/.obsidian/themes/
 
-# Actual test outputs (temporary, not committed)
+# Test outputs
 tests/outputs/*
-!tests/outputs/.gitkeep
-!tests/outputs/README.md
 
 # Test run logs
 tests/**/*.log
