@@ -27,6 +27,7 @@ tests/fixture-vault/.obsidian/workspace.json
 tests/fixture-vault/.obsidian/workspace-mobile.json
 tests/fixture-vault/.obsidian/hotkeys.json
 tests/fixture-vault/.obsidian/appearance.json
+tests/fixture-vault/.obsidian/community-plugins.json
 
 # Test vault - Cache and temporary files (ignore)
 tests/fixture-vault/.obsidian/cache/
@@ -45,9 +46,9 @@ tests/fixture-vault/.obsidian/plugins/hot-reload/node_modules/
 tests/fixture-vault/.obsidian/themes/
 
 # Actual test outputs (temporary, not committed)
-tests/actual/*
-!tests/actual/.gitkeep
-!tests/actual/README.md
+tests/outputs/*
+!tests/outputs/.gitkeep
+!tests/outputs/README.md
 
 # Test run logs
 tests/**/*.log
