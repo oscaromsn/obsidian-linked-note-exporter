@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Title -->
+  <text x="200" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">OAuth 2.0 Authentication Flow</text>
+
+  <!-- Actors -->
+  <g id="user">
+    <circle cx="50" cy="70" r="20" fill="#4A90E2" stroke="#333" stroke-width="2"/>
+    <text x="50" y="100" text-anchor="middle" font-size="11" fill="#333">User</text>
+  </g>
+
+  <g id="client">
+    <rect x="150" y="50" width="80" height="40" rx="5" fill="#7ED321" stroke="#333" stroke-width="2"/>
+    <text x="190" y="75" text-anchor="middle" font-size="11" fill="#fff">Client App</text>
+  </g>
+
+  <g id="auth-server">
+    <rect x="270" y="50" width="80" height="40" rx="5" fill="#F5A623" stroke="#333" stroke-width="2"/>
+    <text x="310" y="70" text-anchor="middle" font-size="10" fill="#fff">Auth</text>
+    <text x="310" y="82" text-anchor="middle" font-size="10" fill="#fff">Server</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666" />
+    </marker>
+  </defs>
+
+  <!-- Step 1: Login Request -->
+  <line x1="70" y1="70" x2="145" y2="70" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="105" y="65" font-size="9" fill="#666">1. Login</text>
+
+  <!-- Step 2: Redirect to Auth -->
+  <line x1="230" y1="60" x2="265" y2="60" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="240" y="55" font-size="9" fill="#666">2. Redirect</text>
+
+  <!-- Step 3: User authenticates -->
+  <path d="M 50 90 Q 200 140 310 90" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="160" y="140" font-size="9" fill="#666">3. Authenticate</text>
+
+  <!-- Step 4: Auth Code -->
+  <line x1="310" y1="95" x2="190" y2="95" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="245" y="110" font-size="9" fill="#666">4. Auth Code</text>
+
+  <!-- Step 5: Exchange Code -->
+  <line x1="230" y1="100" x2="265" y2="100" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="232" y="118" font-size="9" fill="#666">5. Exchange</text>
+
+  <!-- Step 6: Access Token -->
+  <line x1="310" y1="105" x2="190" y2="105" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="240" y="125" font-size="9" fill="#666">6. Token</text>
+
+  <!-- Resource Server -->
+  <rect x="150" y="160" width="80" height="40" rx="5" fill="#BD10E0" stroke="#333" stroke-width="2"/>
+  <text x="190" y="180" text-anchor="middle" font-size="10" fill="#fff">Resource</text>
+  <text x="190" y="192" text-anchor="middle" font-size="10" fill="#fff">Server</text>
+
+  <!-- Step 7: API Request with Token -->
+  <line x1="190" y1="110" x2="190" y2="155" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="200" y="135" font-size="9" fill="#666">7. API + Token</text>
+
+  <!-- Step 8: Protected Resource -->
+  <line x1="190" y1="205" x2="190" y2="240" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="205" y="225" font-size="9" fill="#666">8. Data</text>
+
+  <!-- User receives data -->
+  <path d="M 190 245 Q 120 260 50 245" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="100" y="275" font-size="9" fill="#666">9. Display</text>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(10, 245)">
+    <text x="0" y="0" font-size="10" fill="#666" font-weight="bold">Key:</text>
+    <circle cx="5" cy="15" r="3" fill="#4A90E2"/>
+    <text x="12" y="18" font-size="8" fill="#666">User</text>
+    <rect x="50" y="12" width="15" height="8" fill="#7ED321"/>
+    <text x="70" y="18" font-size="8" fill="#666">Client</text>
+    <rect x="115" y="12" width="15" height="8" fill="#F5A623"/>
+    <text x="135" y="18" font-size="8" fill="#666">Auth</text>
+    <rect x="170" y="12" width="15" height="8" fill="#BD10E0"/>
+    <text x="190" y="18" font-size="8" fill="#666">API</text>
+  </g>
+</svg>
