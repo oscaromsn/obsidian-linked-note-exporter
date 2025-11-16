@@ -21,3 +21,39 @@ data.json
 
 # Exclude macOS Finder (System Explorer) View States
 .DS_Store
+
+# Test vault - User-specific settings (ignore)
+tests/fixture-vault/.obsidian/workspace.json
+tests/fixture-vault/.obsidian/workspace-mobile.json
+tests/fixture-vault/.obsidian/hotkeys.json
+tests/fixture-vault/.obsidian/appearance.json
+
+# Test vault - Cache and temporary files (ignore)
+tests/fixture-vault/.obsidian/cache/
+tests/fixture-vault/.obsidian/workspace-*.json
+
+# Test vault - Keep only required plugins, ignore all others
+tests/fixture-vault/.obsidian/plugins/*
+!tests/fixture-vault/.obsidian/plugins/linked-note-exporter/
+!tests/fixture-vault/.obsidian/plugins/hot-reload/
+
+# Within kept plugins, ignore build artifacts and node_modules
+tests/fixture-vault/.obsidian/plugins/linked-note-exporter/node_modules/
+tests/fixture-vault/.obsidian/plugins/hot-reload/node_modules/
+
+# Test vault - Ignore all themes
+tests/fixture-vault/.obsidian/themes/
+
+# Actual test outputs (temporary, not committed)
+tests/actual/*
+!tests/actual/.gitkeep
+!tests/actual/README.md
+
+# Test run logs
+tests/**/*.log
+tests/**/npm-debug.log*
+
+# OS-specific files in test directories
+tests/**/.DS_Store
+tests/**/Thumbs.db
+tests/**/*.swp
